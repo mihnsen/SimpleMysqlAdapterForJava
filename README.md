@@ -29,31 +29,39 @@ All model have to extends from Table, and you have to set primary key and table 
     Product product = new Product();
     
 # QUERY a SQL
+Return result set
+
     ResultSet result = product.query("SELECT * FROM product");
     
 # SELECT
-Return result set of model
+Return result set
+
     ResultSet result = product.select("id = 1");
     
 # LOAD model object using primary key
 Return model with all attribute data
+
     product.id = 1;
     product.load();
 
 # INSERT
 Return last inserted id
+
     product.name = "OE Proj";
     product.description = "Made by Ownego";
     product.insert("namem, description");
     //add set product.id to inserted id
+
 # UPDATE
 Return true or false
+
     product.name = "OE Proj";
     product.description = "Made by Ownego";
     product.update("namem, description");
     
 # DELETE
 Return true or false
+
     product.delete("name = "+"unknow");
     
 License
